@@ -203,7 +203,7 @@ export default function App() {
             }`}
           >
             <Info className="w-4 h-4" />
-            Team Specifications
+            System Overview
           </button>
         </nav>
 
@@ -288,7 +288,7 @@ export default function App() {
           </div>
         )}
 
-        {/* Tab 3: Architecture & Team Specifications */}
+        {/* Tab 3: System Overview & Architecture */}
         {activeTab === 'about' && (
           <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-xs space-y-6">
             <div className="border-b border-slate-200 pb-4">
@@ -296,55 +296,52 @@ export default function App() {
                 PlateGuard Vision System Architecture
               </h2>
               <p className="text-xs text-slate-500 mt-1">
-                Role distribution and technical integration contracts for the engineering team.
+                Modular architecture for visual food safety, clinical filtering, and assistive feedback.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 rounded-lg border border-blue-200 bg-blue-50/50 space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <h4 className="text-xs font-bold text-blue-900 uppercase tracking-wide">
-                    Role A: Frontend & Accessibility (Active)
-                  </h4>
-                  <span className="text-[10px] font-semibold px-2 py-0.2 rounded bg-blue-600 text-white">Implemented</span>
-                </div>
-                <p className="text-xs text-slate-700 leading-relaxed">
-                  PWA configuration, responsive camera viewport, high-contrast mode, large-text scaling, and browser Web Speech input/output.
+              <div className="p-4 rounded-lg border border-slate-200 bg-slate-50 space-y-1.5">
+                <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wide">
+                  1. Mobile PWA & Accessible Frontend
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Responsive camera capture, high-contrast vision modes, dynamic font scaling, and Web Speech hands-free voice input/output.
                 </p>
               </div>
 
               <div className="p-4 rounded-lg border border-slate-200 bg-slate-50 space-y-1.5">
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wide">
-                  Role B: AI Inference Pipeline
+                  2. Multimodal Vision & OCR Pipeline
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Vision classification and OCR calls returning structured JSON, plus generative image synthesis for modified alternative recipes.
+                  Deep visual classification of prepared meals, ingredient identification, and OCR parsing for packaged nutrition facts.
                 </p>
               </div>
 
               <div className="p-4 rounded-lg border border-slate-200 bg-slate-50 space-y-1.5">
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wide">
-                  Role C: Clinical Rules & Data
+                  3. Clinical Allergen & Threshold Engine
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Allergen alias matrix (e.g. wheat, casein, peanut derivatives), threshold limits for sodium/sugar, and deterministic verdict unit tests.
+                  Allergen alias matching matrix, chronic condition thresholds for sodium/sugar/carbs, and deterministic verdict evaluation.
                 </p>
               </div>
 
               <div className="p-4 rounded-lg border border-slate-200 bg-slate-50 space-y-1.5">
                 <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wide">
-                  Role D: Presentation, Voice & Writing
+                  4. Assistive Audio & Speech Synthesis
                 </h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Spoken synthesis verification, demonstration image sets, 3-minute video presentation script, and Devpost submission documentation.
+                  Auditory acoustic earcons and natural speech synthesis for visually impaired and low-vision users.
                 </p>
               </div>
             </div>
 
             <div className="p-4 rounded-lg border border-slate-200 bg-slate-50 text-xs text-slate-700 space-y-1">
-              <h4 className="font-semibold text-slate-900">Judging Criteria Alignment</h4>
+              <h4 className="font-semibold text-slate-900">Health & Safety Disclaimer</h4>
               <p className="leading-relaxed">
-                PlateGuard satisfies all core pillars: <strong>Computer Vision Classification</strong> for plated meals, <strong>OCR</strong> for nutritional packaging, and <strong>Synthetic Image Generation</strong> for personalized safe alternatives.
+                PlateGuard Vision provides informational dietary evaluation based on visual tokens and nutritional data. Users with life-threatening allergies should always confirm ingredients with manufacturer packaging or food preparers.
               </p>
             </div>
           </div>
