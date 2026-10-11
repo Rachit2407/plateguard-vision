@@ -1,4 +1,5 @@
 import type { AnalysisResult, UserHealthProfile, VerdictLevel } from '../types';
+import { applyRulesToResult } from '../rules/rulesEngine.ts';
 
 export class PlateVisionEngine {
   public static async analyzeImage(
@@ -12,14 +13,14 @@ export class PlateVisionEngine {
       try {
         const liveResult = await this.callGroqVisionAPI(imageDataUrl, profile, apiKey);
         if (liveResult) {
-          return liveResult;
+          return applyRulesToResult(liveResult, profile);
         }
       } catch (err) {
         console.warn("Groq Vision API call failed, falling back to local cognitive vision engine:", err);
       }
     }
 
-    return this.runLocalCognitiveVisionPipeline(imageDataUrl, profile, knownSampleId);
+    return applyRulesToResult(this.runLocalCognitiveVisionPipeline(imageDataUrl, profile, knownSampleId), profile);
   }
 
   private static async callGroqVisionAPI(
